@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Grade Calculator</title>
+</head>
+<body>
+    <h1 style="text-align: center" >My Grade Calculator  </h1>
+    <h2>Student Details</h2>
+    <label>Enter your Name : </label>
+    <input type="text" id="name" placeholder="Enter Your Full Name" required> <br><br>
+
+    <label>Enter Your Marks Fondamental of programming :</label>
+    <input type="number" id="programming" placeholder="programming" required> <br><br>
+
+    <label>Enter your Marks  Web Design :</label>
+    <input type="number" id="wd" placeholder="web design" required> <br><br>
+
+    <label>Enter your Marks Computer System :</label>
+    <input type="number" id="cs" placeholder="cs" required> <br><br>
+
+    <label>Enter your Marks English  :</label>
+    <input type="number" id="english" placeholder="English" required> <br><br>
+
+    <label>Enter your Marks Mathematics :</label>
+    <input type="number" id="math" placeholder="maths" required> <br><br>
+
+    <label>Enter your Marks Ict Skills & Application :</label>
+    <input type="number" id="ict" placeholder="ict" required> <br><br>
+
+    <button onclick="result()">Calculate Risult</button> <br><br><hr><br><br>
+    <h2>Result Sheet</h2>
+
+    <p id="sName"></p>
+    <p id="sTotal"></p>
+    <p id="sAverage"></p>
+    <p id="sLeval"></p>
+
+    <script>
+         function result() {
+            let studentName = document.getElementById("name").value;
+
+            let mpython = parseFloat(document.getElementById("programming").value);
+
+            let mweb = parseFloat(document.getElementById("wd").value);
+
+            
+            let mcs = parseFloat(document.getElementById("cs").value);
+
+            
+            let meng = parseFloat(document.getElementById("english").value);
+
+            
+            let mmath= parseFloat(document.getElementById("math").value);
+
+            
+            let mict = parseFloat(document.getElementById("ict").value);
+
+            let studentTotal = mpython + mweb + mcs + meng + mmath + mict ;
+            let average=  studentTotal / 6 ;
+
+            document.getElementById("sName").innerHTML = "Student Name : "  + studentName;
+             
+            document.getElementById("sTotal").innerHTML = "Student Total :"  + studentName + " is" +studentTotal;
+           
+            document.getElementById("sAverage").innerHTML = "Student Average : " + studentName +  average;
+
+            if (average >= 85 ) {
+                document.getElementById("sLeval").innerHTML = "passed with a A 😍"
+            }
+            else if (average >= 75 ) {
+                document.getElementById("sLeval").innerHTML = "passed with a B 😊"
+            }
+            else  if (average>= 55) {
+                document.getElementById("sLeval").innerHTML = "passed with a C 😒"
+            }
+            else if (average>=35) {
+                document.getElementById("sLeval").innerHTML = "passed with a S😣"
+            }
+            else {
+                document.getElementById("sLeval").innerHTML = "Sorry,But Next Time Will Try It.🤷‍♂️"
+            }
+            
+
+        } 
+    </script>
+</body>
+</html>                                                                                                                                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
