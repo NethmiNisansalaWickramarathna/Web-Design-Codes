@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>User Permition👉👉👉</h1> 
+  <p>Select Your Roal❤️❤️</p>
+
+  <select id="role" onchange="showpermissions()">
+    <option value="select">Select</option>
+     <option value="admin">Admin</option>
+      <option value="editor">Editor</option>
+       <option value="viewer">Viewer</option>
+  </select>
+  <div id="permissions">
+  </div>
+
+  <script >
+    function showpermissions() {
+        var role = document.getElementById("role").value;
+        var permissions;
+
+        switch (role) {
+            default: 
+                permissions = "Invalid role"; 
+                break;
+            case 'admin' : 
+                permissions = "Can create,edit,delete and view all content.";              
+                break;
+            case 'editor': 
+                permissions = "Can delete and view all content.";
+                break; 
+            case 'viewer' : 
+                permissions = "View only" ;
+
+        }
+        document.getElementById("permissions").innerHTML = permissions
+    }
+  </script>
+</body>
+</html>
