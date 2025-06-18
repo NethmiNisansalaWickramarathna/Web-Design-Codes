@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Multiplication table for 5😘😘</h1>
+    <div id="table"></div>
+
+    <script>
+        const number = 5;
+
+        let Answer = ' ';
+
+        for (let i = 1; i <= 20; i++) {
+            let product = number * i ;
+
+            Answer += number + ' x ' + i + ' 👉👉 ' + product + '<br>'; 
+        } 
+
+        // display
+        document.getElementById("table").innerHTML = Answer ;
+    </script>
+</body>
+</html>
